@@ -4,14 +4,16 @@ import {
     NavLink,
     HashRouter
 } from 'react-router-dom';
-import App from './App';
+import { Button } from 'react-bootstrap';
+
 
 const OrderComplete = (props) => {
     return(
         <div>
             Hooray! Way to order those products.
+            <p />
             <HashRouter>
-                <NavLink to="/"><button>Go Home</button></NavLink>
+                <NavLink to="/"><Button variant="primary">Go Home</Button></NavLink>
             </HashRouter>
             
         </div>

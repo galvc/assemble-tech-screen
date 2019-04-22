@@ -4,6 +4,7 @@ import {
     NavLink,
     HashRouter
 } from 'react-router-dom';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 
 class Cart extends Component {
@@ -11,14 +12,20 @@ class Cart extends Component {
         const cart = this.props.loadCart;
         return(
             <div>
-                <table>
+            <Container>
+            <Row>
+                <Col><h3>Your Cart</h3></Col>
+                <Col>Quantity</Col>
+                <Col>Price</Col>
+            </Row>
+            {/* I am missing the product images, i would import them if i had time */}
                     {cart.map((item, key) => {
                         return ( <Product item={item} key={key} /> )
                     })}
-                </table>
+            </Container>
 
                 <HashRouter>
-                    <NavLink to="/check-out"><button>Check Out</button></NavLink>
+                    <NavLink to="/check-out"><Button>Check Out</Button></NavLink>
                 </HashRouter>
             </div>
         )

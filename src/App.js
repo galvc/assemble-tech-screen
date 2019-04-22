@@ -12,10 +12,11 @@ import Cart from './Cart';
 import CheckOut from './CheckOut';
 import OrderComplete from './OrderComplete';
 
+
 class App extends Component {
   state = {
     cart: sampleCart
-  }
+  } 
 
   render() {
     return (
@@ -27,7 +28,7 @@ class App extends Component {
           <HashRouter>
 
             <div className="content">
-              {/* currently trying to figure out routing while making sure button path changes for every component */}
+              {/* currently trying to figure out routing while making sure Button path changes for every component */}
               <Route
                 exact path="/"
                 render={(props) => <Cart {...props} loadCart={this.state.cart} />} />
@@ -42,7 +43,7 @@ class App extends Component {
             </div>
           
 
-            {/* this button needs to change as we change screens */}
+            {/* this Button needs to change as we change screens */}
           </HashRouter>
 
       </div>
