@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Col, Row } from 'react-bootstrap';
+
 
 class Product extends Component {
 
@@ -10,12 +12,12 @@ class Product extends Component {
         const item = this.props.item;
         console.log('product' + item.name);
         return(
-            <tr>
-                <td>{item.name} and {item.sku}</td>
-                <td>{item.quantity}</td>
-                <td>{this.formatPrice(item.quantity, item.unitPrice)}</td>
+            <Row>
+                <Col sm>{item.name} and {item.sku}</Col>
+                <Col sm>{item.quantity}</Col>
+                <Col sm>{this.formatPrice(item.quantity, item.unitPrice)}</Col>
                 {/*  THIS NEEDS TO BE MULTIPLIED WITH QUANTITY */}
-            </tr>
+            </Row>
         )
     }
 }
